@@ -1,0 +1,247 @@
+:root {
+  --ai-blue: #1976d2;
+  --ai-cyan: #00e5ff;
+  --ai-purple: #7b1fa2;
+  --ai-light: #E3F2FD;
+  --ai-card-bg: #1e1e1e;
+  --ai-glow: 0 0 10px rgba(0, 229, 255, 0.7),
+    0 0 20px rgba(0, 229, 255, 0.5),
+    0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ai-light);
+  overflow-x: hidden;
+}
+
+/* 两个小球的动画 */
+.ball1 {
+  width: 500px;
+  height: 500px;
+  background-color: pink;
+  position: absolute;
+  top: 1000px;
+  left: 200px;
+  background: linear-gradient(rgba(40, 80, 227, 0.49) 26.56%, rgb(0, 98, 255) 100%);
+  animation: move 30s infinite alternate;
+  z-index: -1;
+}
+
+.ball2 {
+  width: 500px;
+  height: 500px;
+  background-color: pink;
+  position: absolute;
+  top: 1000px;
+  left: 200px;
+  background: linear-gradient(rgba(47, 184, 255, 0.42) 31.77%, rgb(158, 236, 217) 100%);
+  animation: move 25s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-200px, 0px) rotate(-90deg);
+    border-radius: 51% 49% 58% 42% / 34% 78% 22% 66%;
+  }
+
+  100% {
+    transform: translate(400px, 100px) rotate(-120deg);
+    border-radius: 22% 78% 73% 27% / 67% 31% 69% 33%;
+  }
+}
+
+/* banner */
+.banner {
+  margin-bottom: 40px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  /* 固定高度，不再用vw */
+  height: 53vh;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+/* 内容区布局修复 */
+.content {
+  margin-top: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tab模块 */
+.tab-pane {
+  background-color: #ffffff;
+  padding: clamp(20px, 4vw, 35px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  color: #333;
+  border: none;
+}
+
+.nav-pills .nav-link {
+  padding: 10px 16px;
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 500;
+  color: #666;
+  border-radius: 8px;
+  margin: 0 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--ai-blue);
+  background-color: rgba(25, 118, 210, 0.05);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--ai-blue);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+/* 卡片 */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+  min-height: 450px;
+  /* 统一卡片高度，解决响应式塌陷 */
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+  text-align: center;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 正面图片容器 */
+.front {
+  overflow: hidden;
+}
+
+.front p {
+  margin-top: 10px;
+  background: linear-gradient(45deg, var(--ai-cyan), var(--ai-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(18px, 4vw, 35px);
+  /* 自适应大小，不会溢出 */
+  font-weight: 600;
+}
+
+.front .icon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  padding-bottom: 20px;
+}
+
+.back p {
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  padding: clamp(18px, 3vw, 25px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  color: var(--ai-blue);
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-size: clamp(14px, 2vw, 15px);
+  line-height: 1.7;
+  color: #666;
+  flex: 1;
+}
+
+/* 按钮固定在底部 */
+.btn-primary {
+  margin-top: 15px;
+  align-self: center;
+}
+
+/* 响应式 */
+@media (max-width: 992px) {
+  .carousel-inner img {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 30vh;
+  }
+
+  .nav-pills {
+    flex-wrap: wrap !important;
+  }
+
+  .nav-item {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner img {
+    height: 25vh;
+  }
+}

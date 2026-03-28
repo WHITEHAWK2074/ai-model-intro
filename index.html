@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人工智能+科普--AI大模型应用</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid">
+      <h1>人工智能+科普--AI大模型应用</h1>
+    </div>
+  </header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">AI+科普</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">大模型应用</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/deepseek.html">Deepseek</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/openclaw.html">OpenClaw</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/claude.html">Claude</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="bg">
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+  </div>
+  <main>
+    <!-- 轮播图模块 -->
+    <div class="banner">
+      <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/banner1.jpeg" class="d-block w-100" alt="deepseek">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner2.jpg" class="d-block w-100" alt="openclaw">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/banner3.jpg" class="d-block w-100" alt="claude">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- 主体内容模块 -->
+    <div class="container content">
+      <!-- tab模块 -->
+      <div class="tab mb-5">
+        <ul class="nav nav-pills justify-content-center flex-wrap" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+              type="button" role="tab" aria-controls="pills-home" aria-selected="true">大模型应用</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+              type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Deepseek</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+              type="button" role="tab" aria-controls="pills-contact" aria-selected="false">OpenClaw</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+              type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">Claude</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+            tabindex="0">
+            大模型应用<br>
+            DeepSeek、OpenClaw、Claude 三类大模型各有所长，覆盖不同应用场景。DeepSeek 专攻文本处理，助力内容生成与信息分析。
+            <br>OpenClaw
+            可将语言指令转化为实操动作，赋能办公与设备控制；Claude
+            聚焦编码领域，高效完成代码编写与调试。
+            <br>三者协同，正从文本、操作、开发多维度推动智能应用落地。
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+            tabindex="0">
+            DeepSeek：高效全能的文字大模型<br>
+            DeepSeek 是中国深度求索团队研发的预训练语言模型，主打 “轻量参数 +
+            卓越性能”，摆脱对大算力的依赖。它核心聚焦文本处理，能实现内容生成、信息检索、语义分析等功能，支持从云端到边缘端的全场景部署。应用覆盖企业智能客服、金融投研报告撰写、教育解题辅助等领域，还可通过私有化部署保障数据安全，是兼顾通用性与垂直领域适配性的文字智能工具。
+          </div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+            tabindex="0">
+            OpenClaw：能 “动手执行” 的操作型大模型<br>
+            OpenClaw 是开源的具身智能框架，核心定位是 “数字员工”，打破传统 AI “只说不做” 的局限。它通过 “视觉 - 语言 - 动作”
+            联合建模，将自然语言指令转化为实际操作，可连接各类系统工具与通讯渠道。支持本地部署与多模型适配，技能生态覆盖办公自动化、文件管理、机器人控制等场景，能 7×24
+            小时完成跨平台任务协同，无需编程基础即可实现低代码自动化，大幅提升个人与团队工作效率。
+          </div>
+          <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+            tabindex="0">
+            Claude：专业级编码大模型<br>
+            Claude 是 Anthropic 公司推出的专注编码领域的大模型，以 Claude 4 系列为代表，在复杂代码生成与调试上表现突出。它支持多编程语言开发，能无缝集成 VS Code 等主流
+            IDE，实现结对编程、代码重构、跨文件复杂更改等功能。凭借领先的代码准确率与长时间任务处理能力，广泛应用于软件开发、智能体构建、DevOps
+            自动化等场景，无论是新手开发者的代码辅助，还是专业团队的项目攻坚，都能显著降低开发成本、提升交付效率。
+          </div>
+        </div>
+      </div>
+
+      <!-- 卡片模块 -->
+      <div class="row g-4">
+        <div class="col-md-6 col-12">
+          <div class="card">
+            <div class="front">
+              <img src="./img/card4.jpg" class="card-img-top" alt="AI大模型">
+              <p>鼠标悬停查看详情</p>
+              <img class="icon ai" src="./img/ai.png" alt="">
+            </div>
+            <div class="back">
+              <div class="card-body">
+                <h5 class="card-title">AI大模型综合应用</h5>
+                <p class="card-text">
+                  AI 大模型是基于海量数据训练的 “超级智慧大脑”，以数十亿甚至万亿级参数构建核心架构，能像人类一样理解、推理并完成多元任务。它先通过 “预训练” 吸收互联网海量知识，再经 “微调”
+                  适配特定场景，最终实现跨领域通用能力。
+                  如今大模型已渗透生活与产业：聊天问答、文案代码生成、图文创作等日常场景中，它是高效助手；企业办公、智能客服、科研加速等领域里，它成降本增效利器。2026 年技术更趋成熟，正从 “懂语言” 迈向
+                  “懂世界”，通过多模态融合、具身智能等方向，在物理世界与数字空间同步创造价值，成为推动智能化变革的核心引擎。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="card">
+            <div class="front">
+              <img src="./img/card1.png" class="card-img-top" alt="deepseek">
+              <p>鼠标悬停查看详情</p>
+              <img class="icon fly" src="./img/fly.png" alt="">
+            </div>
+            <div class="back">
+              <div class="card-body">
+                <h5 class="card-title">Deepseek</h5>
+                <p class="card-text">作为国产轻量化预训练语言模型的代表，DeepSeek
+                  由深度求索团队打造，以低算力消耗实现比肩重量级模型的文本处理能力。它能精准理解并生成各类文本，胜任信息提炼、文案创作、智能问答等多元任务，支持灵活的云端与本地部署模式，在企业服务、学术研究、日常办公等场景中，为用户提供高效且安全的文字智能解决方案。
+                </p>
+                <a href="./pages/deepseek.html" target="_blank" class="btn btn-primary">查看详情 <i
+                    class="bi bi-send"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-12">
+          <div class="card">
+            <div class="front">
+              <img src="./img/card2.png" class="card-img-top" alt="openclaw">
+              <p>鼠标悬停查看详情</p>
+              <img class="icon goal" src="./img/goal.png" alt="">
+            </div>
+            <div class="back">
+              <div class="card-body">
+                <h5 class="card-title">OpenClaw</h5>
+                <p class="card-text">
+                  OpenClaw（别称 “小龙虾”，曾用名 ClawdBot、Moltbot）是一款开源本地 AI 智能体，由 Peter Steinberger 开发。它兼容
+                  GPT、Claude、通义千问等主流大模型，可在 Windows、macOS、Linux 本地部署，数据全留存本地、隐私可控。
+                  不同于传统聊天 AI，它能直接操控设备：读写文件、执行脚本、控制浏览器、跨通讯工具（微信、飞书、Telegram）自动办公。通过技能市场扩展能力，可自主分解并执行任务，是能 “动手干活” 的数字助手
+                </p>
+                <a href="./pages/openclaw.html" target="_blank" class="btn btn-primary">查看详情 <i
+                    class="bi bi-send"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-12">
+          <div class="card">
+            <div class="front">
+              <img src="./img/card3.png" class="card-img-top" alt="claude">
+              <p>鼠标悬停查看详情</p>
+              <img class="icon system" src="./img/system.png" alt="">
+            </div>
+            <div class="back">
+              <div class="card-body">
+                <h5 class="card-title">Claude</h5>
+                <p class="card-text">Claude 是由Anthropic 公司（前 OpenAI 团队创立）开发的 AI 大模型系列，以安全可信、超长文本、强推理为核心优势。它采用 “宪法 AI”
+                  训练，输出严谨合规、幻觉更少。
+                  Claude 支持20 万至 100 万 token上下文，可一次性分析整本书、长篇 PDF 与代码库。擅长文档总结、代码编写、多模态理解（图表、截图）。从入门级 Haiku 到旗舰
+                  Opus，覆盖日常助手到专业科研场景，是金融、法律、技术领域的高效安全助手。
+                </p>
+                <a href="./pages/claude.html" target="_blank" class="btn btn-primary">查看详情 <i
+                    class="bi bi-send"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer>
+    <p class="m-0">人工智能+科普宣传网页 © 2026 All Rights Reserved</p>
+  </footer>
+
+  <script src="./bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>
